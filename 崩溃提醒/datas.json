@@ -1,5 +1,5 @@
 {
-  "author": "OpenCode",
+  "author": "一个高质量的神秘人",
   "version": "0.0.1",
   "plugin-type": "classic",
   "description": "检测到机器人进程崩溃时，立即向群聊发送提醒",

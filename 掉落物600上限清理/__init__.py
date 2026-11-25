@@ -24,7 +24,7 @@ from .drop_cleanup_core import (
 
 class DroppedItemCleanup(Plugin):
     name = "掉落物600上限清理"
-    author = "Codex"
+    author = "一个高质量的神秘人"
     version = (1, 0, 1)
     description = "仅统计掉落物实体，三世界合计超过600时自动全部清理"
 

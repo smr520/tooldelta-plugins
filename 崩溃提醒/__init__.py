@@ -39,7 +39,7 @@ class CrashLogHandler(logging.Handler):
 
 class CrashNotifier(Plugin):
     name = "崩溃提醒"
-    author = "OpenCode"
+    author = "一个高质量的神秘人"
     version = (0, 0, 1)
 
     def __init__(self, frame):
