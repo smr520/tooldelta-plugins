@@ -94,7 +94,7 @@ def _build_default_config() -> dict[str, float | bool]:
             "warning_50pct_enable": True,
             "warning_70pct_enable": True,
             "warning_90pct_enable": True,
-            "warning_120pct_force_exit": True,
+            "warning_120pct_force_exit": False,
             "enable_command_blocking": True,
             "max_freq_limit": SERVER_SINGLE_LIMITS[1],
         }

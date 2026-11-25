@@ -66,7 +66,7 @@
     "cmd-debugger": {
       "name": "指令调试器",
       "author": "SuperScript",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "plugin-type": "classic"
     },
     "掉落物600上限清理": {
@@ -102,7 +102,7 @@
     "玩家人数限制": {
       "name": "玩家人数限制",
       "author": "SuperScript",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "plugin-type": "classic"
     },
     "白名单&管理员检测云链联动版": {
@@ -114,7 +114,7 @@
     "每日签到": {
       "name": "签到系统",
       "author": "权威-马牛逼",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "plugin-type": "classic"
     },
     "群服互通": {
@@ -126,7 +126,7 @@
     "PlayerJoinverify": {
       "name": "进服验证",
       "author": "大庆油田",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "plugin-type": "classic"
     },
     "领地系统云链联动版": {

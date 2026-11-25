@@ -64,7 +64,7 @@ def _show_menu(self, player: Player, guild: Optional[GuildData], member: Optiona
     if member:
         player.show(f"§r§7>> §f[{member.rank.display_name}§f] §e{guild.name}")
     else:
-        player.show(f"§r§7>> §f[§7游客§f]")
+        player.show("§r§7>> §f[§7游客§f]")
     
     for cmd, desc in available_items:
         player.show(f"§e§l● §r§a{cmd} §7>>> §f§o{desc}§r")
@@ -436,7 +436,6 @@ def get_guild_rankings(self, sort_by: str = "level") -> List[Tuple[GuildData, An
         return [(g, g.stats.total_contribution) for g in guild_list]
     elif sort_by == "activity":
         # 基于最近活跃度排序
-        current_time = time.time()
         guild_list.sort(key=lambda g: max([m.last_online for m in g.members] + [0]), reverse=True)
         return [(g, max([m.last_online for m in g.members] + [0])) for g in guild_list]
     else:
@@ -568,7 +567,7 @@ def custom_vault_sell(self, player: Player, args: tuple):
 
     # 确认出售
     item_name = self._get_item_display_name(item_id)
-    player.show(f"§l§a公会仓库 §d>> §r确认以自定义价格出售？")
+    player.show("§l§a公会仓库 §d>> §r确认以自定义价格出售？")
     player.show(f"§7物品: §f{item_name} x{count}")
     player.show(f"§7自定义价格: §e{custom_price}贡献点")
     player.show("§7输入 '确认' 继续出售，其他任意键取消")
@@ -683,13 +682,13 @@ def admin_clear_guild_data(self, player: Player, args: tuple):
             player.show(f"§a已创建数据备份：{backup_file}")
 
         # 清理内存中的数据
-        self.guild_manager._guilds_cache = {}
+        self.guild_manager._cache = {}
         self.guild_manager._player_guild_cache = {}
-        self.guild_manager._last_cache_time = 0
+        self.guild_manager._last_load_time = 0
 
         # 清理数据文件
         empty_data = {}
-        tempjson.save_and_write(self.guilds_file, empty_data)
+        tempjson.write(self.guilds_file, empty_data)
 
         player.show("§l§a公会数据清理完成§r")
         player.show("§a✅ 已清空所有公会记录")
@@ -807,7 +806,7 @@ def debug_base_function(self, player: Player, args: tuple):
         player.show("§7据点信息:")
         if guild.base:
             base = guild.base
-            player.show(f"  据点存在: §a是")
+            player.show("  据点存在: §a是")
             player.show(f"  维度: §f{base.dimension}")
             player.show(f"  坐标: §f({base.x}, {base.y}, {base.z})")
             player.show(f"  坐标类型: §f{type(base.x).__name__}, {type(base.y).__name__}, {type(base.z).__name__}")
@@ -822,7 +821,7 @@ def debug_base_function(self, player: Player, args: tuple):
             # 验证维度有效性
             valid_dimensions = [0, -1, 1]
             if base.dimension in valid_dimensions:
-                player.show(f"  维度有效性: §a有效")
+                player.show("  维度有效性: §a有效")
             else:
                 player.show(f"  维度有效性: §c无效 (应为 {valid_dimensions})")
 
@@ -835,8 +834,8 @@ def debug_base_function(self, player: Player, args: tuple):
                 player.show(f"  方法{i+1}({method}): §f{cmd}")
 
         else:
-            player.show(f"  据点存在: §c否")
-            player.show(f"  原因: 公会未设置据点")
+            player.show("  据点存在: §c否")
+            player.show("  原因: 公会未设置据点")
     else:
         player.show("§c公会信息不存在！")
 

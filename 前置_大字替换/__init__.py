@@ -2,17 +2,18 @@ from tooldelta import Plugin, utils, plugin_entry
 
 
 class BigCharReplace(Plugin):
-    author = "SuperScript"
+    author = "ToolDelta"
     name = "前置-大字替换"
+    version = (0, 0, 2)
 
     @staticmethod
     def replaceBig(t: str):
         """
         将给定的字符串中的所有可替换符号替换为大字符号
         Args:
-            t (str): _description_
+            t (str): 原字符串
         Returns:
-            _type_: _description_
+            str: 替换后的字符串
         """
         return utils.simple_fmt(
             {

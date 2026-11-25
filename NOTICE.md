@@ -25,30 +25,30 @@
 
 ## 收录自官方插件市场
 
-以下插件原样收录自 [ToolDelta 官方插件市场（PluginMarket）](https://github.com/ToolDelta-Basic/PluginMarket)，版权归各原作者所有，未重新授权。收录时仅把文档文件名统一为小写 `readme.md`，除下列两个插件外未改动代码：
+以下插件收录自 [ToolDelta 官方插件市场（PluginMarket）](https://github.com/ToolDelta-Basic/PluginMarket)，版权归各原作者所有，未重新授权。收录时按 ToolDelta 1.3.7 插件开发指南做了标准化整理：统一格式的 `readme.md`、对齐 `datas.json` 与类内元数据、清理已弃用 API（`make_data_path` / `format_data_path`）、补齐前置声明、默认配置去私有化，以及少量明显 Bug 修复。各插件的具体改动如下：
 
-| 插件 | 原作者 | 本地改动 |
+| 插件 | 原作者 | 本仓库改动 |
 |---|---|---|
-| 前置_Cb2Bot通信 | SuperScript | 无（仅文件名规范化） |
-| 前置_大字替换 | ToolDelta | 无 |
-| 前置_循环获取玩家坐标 | ToolDelta | 无 |
-| 前置_循环获取玩家背包 | 小六神 | 无 |
-| 前置_玩家死亡检测 | ToolDelta | 无 |
-| 前置_统一消息风格 | ToolDelta | 无 |
-| 进服验证 | 大庆油田 | 改为监听本仓库 `群服互通云链版` 的「群服互通/链接群消息」广播，不再依赖官方群服互通的内部接口；踢出指令改用玩家名 |
-| 插件接口获取修复 | ToolDelta | 无 |
-| 控制台一键更新插件 | ToolDelta | 无 |
-| 性能管理 | SuperScript | 顶层 `import psutil` 改为加载时通过 `pip模块支持` 自动安装（`pre-plugins` 增加 `pip`）；类版本号与 `datas.json` 对齐为 0.0.5 |
-| tooldelta_plugin_指令频率监测 | Mono | 无 |
-| 指令调试器 | SuperScript | 无 |
-| 区块显示器 | SnowLotus | 无 |
-| 玩家人数限制 | SuperScript | 无 |
-| 活力API | Q3CC | 无 |
-| 任务系统云链联动版 | SuperScript / 小六神 | 无（ZBasic 增强为可选，未安装时按普通任务系统运行） |
-| 公会系统 | 星林 & 夏至 | 无 |
-| 领地系统云链联动版 | 小石潭记qwq / 小六神 | 无 |
-| 签到系统 | 权威-马牛逼 | 无 |
-| 入服欢迎 | wling | 无 |
+| 前置_Cb2Bot通信 | SuperScript | 类作者与 `datas.json` 对齐；补统一文档 |
+| 前置_大字替换 | ToolDelta | 补类内 `version`、作者与 `datas.json` 对齐；清理 docstring；补统一文档 |
+| 前置_循环获取玩家坐标 | ToolDelta | 周期参数校验（非数字/≤0 时忽略）；后台线程异常保护；补统一文档 |
+| 前置_循环获取玩家背包 | 小六神 | 仅文件名与文档规范化 |
+| 前置_玩家死亡检测 | ToolDelta | 修正模板残留的类名/内部插件名/entry；docstring 修正；补统一文档 |
+| 前置_统一消息风格 | ToolDelta | 仅文档规范化 |
+| 进服验证 | 大庆油田 | 改为监听本仓库 `群服互通云链版` 的「群服互通/链接群消息」广播；验证码改 6 位随机数字并 10 分钟过期；踢出用玩家名；默认群号改为 `0`；群号不一致时自动改用链接群；数据路径改用 `self.data_path`；版本 0.0.2 |
+| 插件接口获取修复 | ToolDelta | 仅文档规范化 |
+| 控制台一键更新插件 | ToolDelta | 重载确认支持 `Y`/`y`/空回车；补统一文档 |
+| 性能管理 | SuperScript | `psutil` 改为加载时经 `pip模块支持` 自动安装（`pre-plugins` 增加 `pip`）；修正内存告警阈值比较、移除调试输出；版本对齐 0.0.5 |
+| tooldelta_plugin_指令频率监测 | Mono | 「120% 强制退出」默认关闭（避免误退框架）；补统一文档 |
+| 指令调试器 | SuperScript | 合并重复回调、补非超时异常提示、修正 `datas.json` 描述；版本 0.0.2 |
+| 区块显示器 | SnowLotus | 仅文档规范化 |
+| 玩家人数限制 | SuperScript | 踢出指令由 XUID 改为玩家名；版本 0.0.2 |
+| 活力API | Q3CC | 仅文档规范化（请求本身已带 30 秒超时） |
+| 任务系统云链联动版 | SuperScript / 小六神 | 补 `Cb2Bot通信` 前置声明；类内作者与 `datas.json` 对齐；ZBasic 保持可选；补统一文档 |
+| 公会系统 | 星林 & 夏至 | 数据路径改用 `self.data_path`；补缺失的 `VAULT_TRADE_TAX` 常量；修复 `.清理公会数据` 的缓存字段与写入接口；清理无效变量；补统一文档 |
+| 领地系统云链联动版 | 小石潭记qwq / 小六神 | 数据路径改用 `self.data_path`；默认 `白名单` 清空、禁区示例去私有坐标并默认关闭；补统一文档 |
+| 签到系统 | 权威-马牛逼 | 数据路径改用 `self.data_path`；移除未使用 import；奖励描述解析加保护；版本对齐 0.0.2 |
+| 入服欢迎 | wling | 仅文档规范化 |
 
 ## 声明
 

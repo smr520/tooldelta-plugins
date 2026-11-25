@@ -60,7 +60,7 @@ class EmergencyMetaMana(Plugin):
     @utils.timer_event(60, "内存告急停机检测")
     def memory_mana(self):
         vm = psutil.virtual_memory()
-        if vm.percent < self.mem_warn * 100:
+        if vm.percent < self.mem_warn:
             self.warn_lck = False
             self.hi_used = 0
         elif vm.percent > self.mem_warn and (
@@ -72,7 +72,6 @@ class EmergencyMetaMana(Plugin):
                 f"系统可用内存告急({vm.available / BYTES2MB:.2f}MB/{vm.total / BYTES2MB:.2f}MB 可用, {vm.percent:.2f}%)"
             )
         if vm.percent > self.mem_exit:
-            print(vm.percent, self.mem_exit)
             fmts.print_err(
                 f"已超过最大可用内存限额({vm.available / BYTES2MB:.2f}MB/{vm.total / BYTES2MB:.2f}MB 可用, {vm.percent:.2f}%), 系统将退出"
             )

@@ -11,6 +11,7 @@
     ],
     "tooldelta_plugin_指令频率监测": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "『Orion System』违规与作弊行为综合反制系统": [
@@ -25,11 +26,12 @@
     ],
     "任务系统云链联动版": [
         "datas.json",
-        "readme.txt",
+        "readme.md",
         "__init__.py"
     ],
     "入服欢迎": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "公会系统": [
@@ -51,7 +53,7 @@
     ],
     "前置_Cb2Bot通信": [
         "datas.json",
-        "readme.txt",
+        "readme.md",
         "__init__.py"
     ],
     "前置_MIDI播放器": [
@@ -71,10 +73,12 @@
     ],
     "前置_大字替换": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "前置_循环获取玩家坐标": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "前置_循环获取玩家背包": [
@@ -82,6 +86,7 @@
         "config.py",
         "core.py",
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "前置_玩家XUID获取": [
@@ -91,10 +96,12 @@
     ],
     "前置_玩家死亡检测": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "前置_统一消息风格": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "前置_聊天栏菜单": [
@@ -105,6 +112,7 @@
     ],
     "区块显示器": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "崩溃提醒": [
@@ -114,10 +122,12 @@
     ],
     "性能管理": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "指令调试器": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "掉落物600上限清理": [
@@ -128,10 +138,12 @@
     ],
     "控制台一键更新插件": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "插件接口获取修复": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "无邪玩家互传": [
@@ -146,6 +158,7 @@
     ],
     "玩家人数限制": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "白名单&管理员检测云链联动版": [
@@ -155,6 +168,7 @@
     ],
     "签到系统": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "群服互通云链版": [
@@ -647,6 +661,7 @@
     ],
     "进服验证": [
         "datas.json",
+        "readme.md",
         "__init__.py"
     ],
     "领地系统云链联动版": [
@@ -654,6 +669,7 @@
         "datas.json",
         "geometry.py",
         "models.py",
+        "readme.md",
         "__init__.py"
     ]
 }

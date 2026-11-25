@@ -21,7 +21,7 @@ class GuildPlugin(Plugin):
     def __init__(self, frame: ToolDelta):
         super().__init__(frame)
 
-        self.guilds_file = self.format_data_path("公会数据文件.json")
+        self.guilds_file = str(self.data_path / "公会数据文件.json")
         self.guild_manager = GuildManager(self.guilds_file)
         self.guild_chat_mode: Dict[str, bool] = {}
         self.item_matcher = ItemNameMatcher() 

@@ -31,6 +31,8 @@ def generate_json(directory):
         relative_path = os.path.relpath(root, directory)
         if any(item in relative_path for item in [".", ".git"]):
             continue
+        if "__pycache__" in relative_path.split(os.sep):
+            continue
         data[relative_path] = list(files)
     return data
 

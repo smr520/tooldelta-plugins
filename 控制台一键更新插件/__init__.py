@@ -21,7 +21,7 @@ class FastUpdatePlugins(Plugin):
         fmts.print_inf("正在获取更新列表..")
         plugin_manager.update_all_plugins(plugin_manager.get_all_plugin_datas())
         resp = input(fmts.fmt_info("是否立即重载 (§ay§r/§cn§r)? 请输入: "))
-        if resp.strip() == "y":
+        if resp.strip().lower() in ("", "y"):
             self.reload_sys()
         else:
             fmts.print_inf("可以在稍后重载系统以使更新的插件生效。")

@@ -17,6 +17,7 @@ class Config:
     ITEMS_PER_PAGE = 6
     VAULT_INITIAL_SLOTS = 54
     VAULT_SLOTS_PER_LEVEL = 0  # 不再随等级增加
+    VAULT_TRADE_TAX = 0.05     # 公会仓库交易的卖方税率
     DIMENSION_NAMES = {0: "主世界", 1: "地狱", 2: "末地"}
     CACHE_DURATION = 300 
     EFFECTS_CONFIG = {

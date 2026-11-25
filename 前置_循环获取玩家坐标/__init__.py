@@ -31,7 +31,15 @@ class GlobalGetPlayerPos(Plugin):
             ```
         """
         if "cycle" in event.data:
-            self.CYCLE = float(event.data["cycle"])
+            try:
+                cycle = float(event.data["cycle"])
+            except (TypeError, ValueError):
+                fmts.print_war("循环获取玩家坐标: 周期参数不是数字，已忽略")
+                return
+            if cycle <= 0:
+                fmts.print_war("循环获取玩家坐标: 周期必须大于 0，已忽略")
+                return
+            self.CYCLE = cycle
 
     def force_update(self, _: InternalBroadcast):
         """
@@ -56,14 +64,14 @@ class GlobalGetPlayerPos(Plugin):
             {
                 "Happy2018new": {
                     "x": float(...),
-                    "y": float(...)
+                    "y": float(...),
                     "z": float(...),
                     "yRot": float(...),
                     "dimension": int(...)
                 },
                 "SuperScript": {
                     "x": float(...),
-                    "y": float(...)
+                    "y": float(...),
                     "z": float(...),
                     "yRot": float(...),
                     "dimension": int(...)
@@ -111,8 +119,15 @@ class GlobalGetPlayerPos(Plugin):
     @utils.thread_func("循环获取玩家坐标")
     def _main_thread(self):
         while 1:
-            self.get_and_publish_player_position()
-            time.sleep(self.CYCLE)
+            try:
+                self.get_and_publish_player_position()
+            except Exception as err:
+                fmts.print_err(f"循环获取玩家坐标异常: {err}")
+            try:
+                interval = float(self.CYCLE)
+            except (TypeError, ValueError):
+                interval = 1.0
+            time.sleep(max(0.2, interval))
 
 
 entry = plugin_entry(GlobalGetPlayerPos, "循环获取玩家坐标")

@@ -22,7 +22,8 @@
     "plugin_ids_map.json": 0,
     "tooldelta_plugin_指令频率监测": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "『Orion System』违规与作弊行为综合反制系统": {
         "__init__.py": 0,
@@ -37,11 +38,12 @@
     "任务系统云链联动版": {
         "__init__.py": 0,
         "datas.json": 0,
-        "readme.txt": 0
+        "readme.md": 0
     },
     "入服欢迎": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "公会系统": {
         "__init__.py": 0,
@@ -63,7 +65,7 @@
     "前置_Cb2Bot通信": {
         "__init__.py": 0,
         "datas.json": 0,
-        "readme.txt": 0
+        "readme.md": 0
     },
     "前置_MIDI播放器": {
         "__init__.py": 0,
@@ -82,18 +84,21 @@
     },
     "前置_大字替换": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "前置_循环获取玩家坐标": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "前置_循环获取玩家背包": {
         "API调用文档.md": 0,
         "__init__.py": 0,
         "config.py": 0,
         "core.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "前置_玩家XUID获取": {
         "__init__.py": 0,
@@ -102,11 +107,13 @@
     },
     "前置_玩家死亡检测": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "前置_统一消息风格": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "前置_聊天栏菜单": {
         "__init__.py": 0,
@@ -116,7 +123,8 @@
     },
     "区块显示器": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "崩溃提醒": {
         "__init__.py": 0,
@@ -125,11 +133,13 @@
     },
     "性能管理": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "指令调试器": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "掉落物600上限清理": {
         "__init__.py": 0,
@@ -139,11 +149,13 @@
     },
     "控制台一键更新插件": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "插件接口获取修复": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "无邪玩家互传": {
         "__init__.py": 0,
@@ -157,7 +169,8 @@
     },
     "玩家人数限制": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "白名单&管理员检测云链联动版": {
         "__init__.py": 0,
@@ -166,7 +179,8 @@
     },
     "签到系统": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "群服互通云链版": {
         "__init__.py": 0,
@@ -659,13 +673,15 @@
     },
     "进服验证": {
         "__init__.py": 0,
-        "datas.json": 0
+        "datas.json": 0,
+        "readme.md": 0
     },
     "领地系统云链联动版": {
         "__init__.py": 0,
         "config.py": 0,
         "datas.json": 0,
         "geometry.py": 0,
-        "models.py": 0
+        "models.py": 0,
+        "readme.md": 0
     }
 }

@@ -6,7 +6,7 @@ from importlib.metadata import version, PackageNotFoundError
 
 class PipSupport(Plugin):
     name = "pip模块安装支持"
-    author = "ToolDelta"
+    author = "SuperScript"
     version = (0, 0, 6)
 
     def __init__(self, frame):

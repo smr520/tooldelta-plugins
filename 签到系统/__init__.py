@@ -4,9 +4,7 @@ import random
 from tooldelta import (
     Plugin,
     plugin_entry,
-    Player,
     cfg,
-    utils,
     fmts,
 )
 
@@ -135,7 +133,7 @@ class SignInSystem(Plugin):
         self.config, _ = cfg.get_plugin_config_and_version(
             self.name, config_schema, default_config, self.version
         )
-        self.sign_in_data_file = self.format_data_path("sign_in_data.json")
+        self.sign_in_data_file = str(self.data_path / "sign_in_data.json")
         self.sign_in_data = {}
         self.load_sign_in_data()
         self.ListenChat(self.handle_sign_in)
@@ -177,8 +175,11 @@ class SignInSystem(Plugin):
         }
         self.save_sign_in_data()
         reward_command = self.config["每日奖励"].replace("[player]", player.name)
-        reward_desc = reward_command.split()[-2:]
-        reward_desc = f"{reward_desc[1]} {reward_desc[0]}"
+        reward_parts = reward_command.split()
+        if len(reward_parts) >= 2:
+            reward_desc = f"{reward_parts[-1]} {reward_parts[-2]}"
+        else:
+            reward_desc = reward_command
         sign_msg = random.choice(self.config["签到语列表"])
         try:
             self.game_ctrl.sendwocmd(reward_command)

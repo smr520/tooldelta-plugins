@@ -278,7 +278,7 @@ class StandardChatbarTriggers:
 
 class ChatbarMenu(Plugin):
     name = "聊天栏菜单新版"
-    author = "SuperScript/猫猫"
+    author = "SuperScript"
     version = (0, 4, 1)
     description = "前置插件, 提供聊天栏菜单功能"
 

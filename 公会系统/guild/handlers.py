@@ -12,8 +12,6 @@ def _handle_effect(self, player: Player) -> bool:
         player.show("§l§a公会 §d>> §r你尚未加入任何公会")
         return True
 
-    level = guild.level
-
     # 显示可选效果
     player.show("§l§a公会 §d>> §r可用效果列表:")
 
@@ -313,7 +311,6 @@ def _handle_tasks(self, player: Player) -> bool:
         player.show("§l§a公会 §d>> §r你尚未加入任何公会")
         return True
 
-    member = guild.get_member(player.name)
     can_manage = guild.has_permission(player.name, "task_manage") 
 
     while True:

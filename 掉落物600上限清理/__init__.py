@@ -44,7 +44,6 @@ class DroppedItemCleanup(Plugin):
         self._stop_event = threading.Event()
         self._worker: threading.Thread | None = None
         self._scan_lock = threading.Lock()
-        self._last_cleanup_total = 0
         self._error_printed = False
         self.ListenPreload(self.on_def)
         self.ListenActive(self.on_active)
@@ -167,7 +166,6 @@ class DroppedItemCleanup(Plugin):
             self._error_printed = False
             if not should_cleanup(counts, self._threshold()):
                 return False
-            self._last_cleanup_total = total
             self._cleanup_all_dimensions(total)
             return True
 

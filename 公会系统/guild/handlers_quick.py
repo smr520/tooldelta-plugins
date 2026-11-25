@@ -67,7 +67,7 @@ def quick_join_guild(self, player: Player, args: tuple):
     if len(matched_guilds) == 1:
         target_guild = matched_guilds[0]
     else:
-        player.show(f"§l§a公会 §d>> §r找到多个匹配的公会，请选择:")
+        player.show("§l§a公会 §d>> §r找到多个匹配的公会，请选择:")
         for i, guild in enumerate(matched_guilds, 1):
             player.show(f"§e{i}. §f{guild.name} §7(会长: {guild.owner})")
         

@@ -8,8 +8,8 @@ from tooldelta import Plugin, plugin_entry, utils, fmts
 class FateArkBotAliveChecker(Plugin):
 
     name = "FateArk掉线检测"
-    author = "神秘人"
-    version = (1, 0, 0)
+    author = "渊思"
+    version = (0, 0, 1)
 
 
     def __init__(self, frame):

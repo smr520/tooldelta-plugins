@@ -57,12 +57,11 @@ class LandPlugin(Plugin):
         self._no_create_regions_file_state = None
         self._cfg_default = default_config()
         self._cfg_std = cfg.auto_to_std(self._cfg_default)
-        self.make_data_path()
         self._migrate_legacy_data_path()
-        self.no_create_regions_file = self.format_data_path(
-            NO_CREATE_REGIONS_FILE)
+        self.no_create_regions_file = str(
+            self.data_path / NO_CREATE_REGIONS_FILE)
         self.cfg = self._load_config(self._cfg_default, self._cfg_std)
-        self.data_file = self.format_data_path(str(self.cfg["数据文件"]))
+        self.data_file = str(self.data_path / str(self.cfg["数据文件"]))
         self._apply_runtime_config_fields(reload_data_file=False)
         self.no_create_regions_raw = self._load_no_create_regions()
         self.no_create_regions = self._normalize_no_create_regions(
@@ -825,7 +824,7 @@ class LandPlugin(Plugin):
         os.makedirs(self.data_path, exist_ok=True)
         for filename in ("领地数据.json", "不可创建领地区域.json"):
             old_file = os.path.join(legacy_path, filename)
-            new_file = self.format_data_path(filename)
+            new_file = str(self.data_path / filename)
             if os.path.isfile(old_file) and not os.path.exists(new_file):
                 try:
                     shutil.copy2(old_file, new_file)

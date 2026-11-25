@@ -3,8 +3,8 @@ from tooldelta import Plugin, plugin_entry, Player
 from tooldelta.constants import PacketIDS
 
 
-class NewPlugin(Plugin):
-    name = "anti"
+class PlayerDeathListener(Plugin):
+    name = "玩家死亡检测"
     author = "ToolDelta"
     version = (0, 0, 1)
 
@@ -31,7 +31,7 @@ class NewPlugin(Plugin):
 
     def listen_player_respawn(self, cb: Callable[[Player], None]):
         """
-        注册玩家重生事件监听器监听器
+        注册玩家重生事件监听器
 
         Args:
             cb (Callable[[Player], None]): 监听回调函数
@@ -71,4 +71,4 @@ class NewPlugin(Plugin):
             cb(player)
 
 
-entry = plugin_entry(NewPlugin, "玩家死亡检测")
+entry = plugin_entry(PlayerDeathListener, "玩家死亡检测")

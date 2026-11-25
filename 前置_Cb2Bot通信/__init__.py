@@ -9,7 +9,7 @@ AVALIABLE_CB = Callable[[list[str]], bool | Any]
 
 class TellrawCb2Bot(Plugin):
     name = "前置-命令方块与机器人数据通信"
-    author = "ToolDelta"
+    author = "SuperScript"
     version = (0, 0, 2)
 
     def __init__(self, frame):
