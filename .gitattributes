@@ -1,0 +1,21 @@
+* text=auto
+
+# Python / 文本：统一 LF，避免跨平台行尾问题
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# 二进制资源：禁止行尾转换，避免素材损坏
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.pdn binary
+*.bin binary
+*.ico binary
+*.zip binary
+*.7z binary

@@ -1,0 +1,9 @@
+{
+  "author": "OpenCode",
+  "version": "0.0.1",
+  "plugin-type": "classic",
+  "description": "检测到机器人进程崩溃时，立即向群聊发送提醒",
+  "pre-plugins": {},
+  "plugin-id": "崩溃提醒",
+  "enabled": true
+}

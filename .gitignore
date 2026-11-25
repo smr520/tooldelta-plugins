@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# 运行时配置 / 数据 / 日志
+插件配置文件/
+插件数据文件/
+日志文件/
+logs/
+*.log
+
+# 本地打包产物
+*.zip
+*.7z
+*.rar
+
+# 环境与密钥
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
