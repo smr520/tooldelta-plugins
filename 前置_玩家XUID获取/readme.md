@@ -54,7 +54,7 @@ name = xuid_api.get_name_by_xuid(xuid, allow_offline=True)
 - ToolDelta 1.3.7 类式插件（FateArk / MCSM 面板）；
 - 仅使用标准库（`threading`）与 ToolDelta 内置模块，无第三方库；
 - 依赖玩家列表包（`IDPlayerList`）和在线玩家对象里的 `xuid` 字段；
-- 本仓库内使用它的插件：`白名单系统`（`pre-plugins` 声明 `XUID获取 >= 0.0.1`）、`『Orion System』违规与作弊行为综合反制系统`（`>= 0.0.7`）、`白名单&管理员检测云链联动版`（代码里调用 `GetPluginAPI("XUID获取")`，但它的 `datas.json` 未声明该前置）、`群服互通云链版`（经 Orion 的 `xuid_getter` 间接调用）；
+- 本仓库内使用它的插件：`『Orion System』违规与作弊行为综合反制系统`（`pre-plugins` 声明 `XUID获取 >= 0.0.7`）、`白名单&管理员检测云链联动版`（`pre-plugins` 声明 `XUID获取 >= 0.0.1`）。
 - `datas.json` 的 `plugin-id` 与 `plugin_entry` 注册的 API 名同为 `XUID获取`。
 
 ## 版本记录
