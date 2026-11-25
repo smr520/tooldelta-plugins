@@ -12,7 +12,7 @@ from tooldelta import (
 class SignInSystem(Plugin):
     name = "每日签到"
     author = "权威-马牛逼"
-    version = (0, 0, 2)
+    version = (0, 0, 3)
 
     def __init__(self, frame):
         super().__init__(frame)
@@ -137,6 +137,19 @@ class SignInSystem(Plugin):
         self.sign_in_data = {}
         self.load_sign_in_data()
         self.ListenChat(self.handle_sign_in)
+        self.ListenPreload(self.on_preload)
+
+    def on_preload(self):
+        chatbar = self.GetPluginAPI("聊天栏菜单", force=False)
+        if chatbar is None:
+            self.print("§e未找到 聊天栏菜单，仅支持 #签到 触发")
+            return
+        chatbar.add_new_trigger(
+            ["签到"],
+            [],
+            "每日签到领取奖励（也可在聊天栏发送 #签到）",
+            lambda player, _args: self.do_sign_in(player),
+        )
 
     def load_sign_in_data(self):
         try:
@@ -154,10 +167,11 @@ class SignInSystem(Plugin):
             fmts.print_err("保存签到数据失败")
 
     def handle_sign_in(self, chat):
-        player = chat.player
-        message = chat.msg.strip()
-        if message != "#签到":
+        if chat.msg.strip() != "#签到":
             return
+        self.do_sign_in(chat.player)
+
+    def do_sign_in(self, player):
         current_time = int(time.time())
         player_data = self.sign_in_data.get(player.uuid, {})
         last_sign_time = player_data.get("last_sign_time", 0)

@@ -1,8 +1,10 @@
 {
   "author": "SuperScript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "plugin-type": "classic",
-  "description": "限制租赁服人数",
-  "pre-plugins": {},
+  "description": "限制租赁服在线人数，超过上限时踢出非管理员新玩家",
+  "pre-plugins": {
+    "聊天栏菜单": "0.4.0"
+  },
   "plugin-id": "玩家人数限制"
 }

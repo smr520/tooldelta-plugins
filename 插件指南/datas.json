@@ -1,0 +1,10 @@
+{
+  "author": "一个高质量的神秘人",
+  "version": "1.0.0",
+  "plugin-type": "classic",
+  "description": "游戏内 .指南 / .插件 查看本服插件用法：玩家菜单、自动运行插件、控制台与 QQ 指令",
+  "pre-plugins": {
+    "聊天栏菜单": "0.4.0"
+  },
+  "plugin-id": "插件指南"
+}

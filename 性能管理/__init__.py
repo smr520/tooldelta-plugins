@@ -18,7 +18,7 @@ def pretty_show_bytes(bytes: int):
 class EmergencyMetaMana(Plugin):
     name = "性能管理"
     author = "SuperScript"
-    version = (0, 0, 5)
+    version = (0, 0, 6)
 
     def __init__(self, f):
         super().__init__(f)
@@ -55,7 +55,23 @@ class EmergencyMetaMana(Plugin):
         self.frame.add_console_cmd_trigger(
             ["性能", "top"], "[参数 或 -help]", "查看系统性能情况", self.chk_proc
         )
+        chatbar = self.GetPluginAPI("聊天栏菜单", force=False)
+        if chatbar is not None:
+            chatbar.add_new_trigger(
+                ["性能"],
+                [],
+                "查看服务器 CPU / 内存（OP）",
+                self.cmd_perf_in_game,
+                op_only=True,
+            )
         fmts.print_inf("在控制台输入 性能 以查看当前系统的性能.")
+
+    def cmd_perf_in_game(self, player, _args):
+        vm = psutil.virtual_memory()
+        player.show(
+            f"§e内存：§f{vm.used / BYTES2MB:.1f}/{vm.total / BYTES2MB:.1f} MB §7({vm.percent:.1f}%)"
+        )
+        player.show(f"§eCPU：§f{psutil.cpu_percent():.1f}%")
 
     @utils.timer_event(60, "内存告急停机检测")
     def memory_mana(self):

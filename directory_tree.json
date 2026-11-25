@@ -152,6 +152,11 @@
         "datas.json": 0,
         "readme.md": 0
     },
+    "插件指南": {
+        "__init__.py": 0,
+        "datas.json": 0,
+        "readme.md": 0
+    },
     "插件接口获取修复": {
         "__init__.py": 0,
         "datas.json": 0,

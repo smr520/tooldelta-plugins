@@ -1,8 +1,10 @@
 {
   "author": "权威-马牛逼",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "plugin-type": "classic",
-  "description": "100种签到语",
-  "pre-plugins": {},
+  "description": "聊天栏 .签到 或 #签到 每日签到领取奖励，支持 99 条随机签到语",
+  "pre-plugins": {
+    "聊天栏菜单": "0.4.0"
+  },
   "plugin-id": "每日签到"
 }

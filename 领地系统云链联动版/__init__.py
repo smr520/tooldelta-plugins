@@ -47,7 +47,7 @@ class LandPlugin(Plugin):
 
     name = PLUGIN_NAME
     author = "小石潭记qwq/小六神"
-    version = (0, 1, 18)
+    version = (0, 1, 19)
 
     def __init__(self, frame):
         super().__init__(frame)
@@ -103,6 +103,14 @@ class LandPlugin(Plugin):
     def on_preload(self):
         """Implement the on preload operation."""
         self.xuid_getter = self.GetPluginAPI("XUID获取", (0, 0, 7))
+        chatbar = self.GetPluginAPI("聊天栏菜单", force=False)
+        if chatbar is not None:
+            chatbar.add_trigger(
+                ["领地"],
+                None,
+                "打开领地系统菜单（聊天栏发送 .领地）",
+                None,
+            )
 
     def on_active(self):
         """Implement the on active operation."""

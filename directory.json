@@ -141,6 +141,11 @@
         "readme.md",
         "__init__.py"
     ],
+    "插件指南": [
+        "datas.json",
+        "readme.md",
+        "__init__.py"
+    ],
     "插件接口获取修复": [
         "datas.json",
         "readme.md",
