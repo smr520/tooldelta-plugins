@@ -23,6 +23,33 @@
 | 『Orion System』违规与作弊行为综合反制系统 | style_天枢『猎户座』 | 修复异常路径与兼容问题 |
 | 群服互通云链版 | 大庆油田 / SuperScript | 本地修复、结构收敛与功能调整 |
 
+## 收录自官方插件市场
+
+以下插件原样收录自 [ToolDelta 官方插件市场（PluginMarket）](https://github.com/ToolDelta-Basic/PluginMarket)，版权归各原作者所有，未重新授权。收录时仅把文档文件名统一为小写 `readme.md`，除下列两个插件外未改动代码：
+
+| 插件 | 原作者 | 本地改动 |
+|---|---|---|
+| 前置_Cb2Bot通信 | SuperScript | 无（仅文件名规范化） |
+| 前置_大字替换 | ToolDelta | 无 |
+| 前置_循环获取玩家坐标 | ToolDelta | 无 |
+| 前置_循环获取玩家背包 | 小六神 | 无 |
+| 前置_玩家死亡检测 | ToolDelta | 无 |
+| 前置_统一消息风格 | ToolDelta | 无 |
+| 进服验证 | 大庆油田 | 改为监听本仓库 `群服互通云链版` 的「群服互通/链接群消息」广播，不再依赖官方群服互通的内部接口；踢出指令改用玩家名 |
+| 插件接口获取修复 | ToolDelta | 无 |
+| 控制台一键更新插件 | ToolDelta | 无 |
+| 性能管理 | SuperScript | 顶层 `import psutil` 改为加载时通过 `pip模块支持` 自动安装（`pre-plugins` 增加 `pip`）；类版本号与 `datas.json` 对齐为 0.0.5 |
+| tooldelta_plugin_指令频率监测 | Mono | 无 |
+| 指令调试器 | SuperScript | 无 |
+| 区块显示器 | SnowLotus | 无 |
+| 玩家人数限制 | SuperScript | 无 |
+| 活力API | Q3CC | 无 |
+| 任务系统云链联动版 | SuperScript / 小六神 | 无（ZBasic 增强为可选，未安装时按普通任务系统运行） |
+| 公会系统 | 星林 & 夏至 | 无 |
+| 领地系统云链联动版 | 小石潭记qwq / 小六神 | 无 |
+| 签到系统 | 权威-马牛逼 | 无 |
+| 入服欢迎 | wling | 无 |
+
 ## 声明
 
 - 第三方插件代码的版权、许可与解释权归各原作者所有，本仓库不对其重新授权，也不提供任何担保。

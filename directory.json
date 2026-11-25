@@ -9,6 +9,10 @@
         "readme.md",
         "__init__.py"
     ],
+    "tooldelta_plugin_指令频率监测": [
+        "datas.json",
+        "__init__.py"
+    ],
     "『Orion System』违规与作弊行为综合反制系统": [
         "ban_system.py",
         "config.py",
@@ -17,6 +21,37 @@
         "device_id_core.py",
         "readme.md",
         "utils.py",
+        "__init__.py"
+    ],
+    "任务系统云链联动版": [
+        "datas.json",
+        "readme.txt",
+        "__init__.py"
+    ],
+    "入服欢迎": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "公会系统": [
+        "datas.json",
+        "readme.md",
+        "__init__.py",
+        "错误处理.md"
+    ],
+    "公会系统\\guild": [
+        "config.py",
+        "control.py",
+        "handlers.py",
+        "handlers_quick.py",
+        "logic.py",
+        "matchers.py",
+        "models.py",
+        "service.py",
+        "validators.py"
+    ],
+    "前置_Cb2Bot通信": [
+        "datas.json",
+        "readme.txt",
         "__init__.py"
     ],
     "前置_MIDI播放器": [
@@ -34,9 +69,32 @@
         "readme.md",
         "__init__.py"
     ],
+    "前置_大字替换": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "前置_循环获取玩家坐标": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "前置_循环获取玩家背包": [
+        "API调用文档.md",
+        "config.py",
+        "core.py",
+        "datas.json",
+        "__init__.py"
+    ],
     "前置_玩家XUID获取": [
         "datas.json",
         "readme.md",
+        "__init__.py"
+    ],
+    "前置_玩家死亡检测": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "前置_统一消息风格": [
+        "datas.json",
         "__init__.py"
     ],
     "前置_聊天栏菜单": [
@@ -45,9 +103,21 @@
         "readme.md",
         "__init__.py"
     ],
+    "区块显示器": [
+        "datas.json",
+        "__init__.py"
+    ],
     "崩溃提醒": [
         "datas.json",
         "readme.md",
+        "__init__.py"
+    ],
+    "性能管理": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "指令调试器": [
+        "datas.json",
         "__init__.py"
     ],
     "掉落物600上限清理": [
@@ -56,14 +126,35 @@
         "readme.md",
         "__init__.py"
     ],
+    "控制台一键更新插件": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "插件接口获取修复": [
+        "datas.json",
+        "__init__.py"
+    ],
     "无邪玩家互传": [
         "datas.json",
         "readme.md",
         "__init__.py"
     ],
+    "活力API": [
+        "datas.json",
+        "readme.md",
+        "__init__.py"
+    ],
+    "玩家人数限制": [
+        "datas.json",
+        "__init__.py"
+    ],
     "白名单&管理员检测云链联动版": [
         "datas.json",
         "readme.md",
+        "__init__.py"
+    ],
+    "签到系统": [
+        "datas.json",
         "__init__.py"
     ],
     "群服互通云链版": [
@@ -553,5 +644,16 @@
         "wood_pickaxe.png",
         "wood_shovel.png",
         "wood_sword.png"
+    ],
+    "进服验证": [
+        "datas.json",
+        "__init__.py"
+    ],
+    "领地系统云链联动版": [
+        "config.py",
+        "datas.json",
+        "geometry.py",
+        "models.py",
+        "__init__.py"
     ]
 }
