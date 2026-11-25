@@ -30,10 +30,10 @@
 https://raw.githubusercontent.com/smr520/tooldelta-plugins/main
 ```
 
-如果访问 GitHub 需要镜像，按 ToolDelta 的镜像格式填写，例如：
+如果访问 GitHub 需要镜像（国内直连 raw 可能超时），按 ToolDelta 的镜像格式填写，例如：
 
 ```text
-<镜像地址>/https://raw.githubusercontent.com/smr520/tooldelta-plugins/main
+https://ghproxy.net/https://raw.githubusercontent.com/smr520/tooldelta-plugins/main
 ```
 
 然后启动 ToolDelta，在控制台输入 `插件市场` 即可浏览和安装本仓库的插件。
